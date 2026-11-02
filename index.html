@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To My Sweet Headache 💙</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(140deg,#d8ebff,#f5faff,#e0efff);
+  color: #355b7c;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#floaties {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.float {
+  position: absolute;
+  opacity: .65;
+  animation: drift 5s ease-in-out infinite;
+}
+
+@keyframes drift {
+  50% { transform: translateY(-20px) rotate(12deg); }
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 22px 17px 45px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  color: #7297b8;
+  margin-bottom: 17px;
+}
+
+.progress {
+  height: 5px;
+  background: #ffffffa8;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+#bar {
+  width: 25%;
+  height: 100%;
+  background: #649ed2;
+  transition: .5s;
+}
+
+.page {
+  display: none;
+  animation: enter .5s ease;
+}
+
+.page.active { display: block; }
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  background: #ffffffdf;
+  border: 2px solid white;
+  border-radius: 28px;
+  padding: 28px 21px;
+  text-align: center;
+  box-shadow: 0 12px 35px #709cc51c;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 13px;
+  background: #e8f3ff;
+  border-radius: 30px;
+  color: #6b97bd;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 17px;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.25;
+  color: #315779;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 25px;
+  color: #315779;
+  margin-bottom: 13px;
+  font-weight: 900;
+}
+
+.script {
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #669dce;
+  margin: 12px 0;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #66839e;
+}
+
+.sticker {
+  display: block;
+  font-size: 65px;
+  margin: 10px 0 18px;
+}
+
+.divider {
+  height: 3px;
+  width: 65px;
+  background: #c5def5;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+
+.btn {
+  border: 0;
+  background: #659ed1;
+  color: white;
+  border-radius: 40px;
+  padding: 14px 23px;
+  margin-top: 23px;
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 6px 15px #659ed144;
+  cursor: pointer;
+}
+
+.btn:active { transform: scale(.96); }
+
+.softbox {
+  background: #f0f7ff;
+  border-radius: 18px;
+  padding: 17px;
+  margin-top: 18px;
+  line-height: 1.9;
+  font-size: 13px;
+  color: #60809e;
+}
+
+.letter {
+  text-align: left;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.compliment {
+  text-align: left;
+  padding: 15px;
+  background: #f0f7ff;
+  border-radius: 17px;
+  margin: 11px 0;
+  cursor: pointer;
+  border: 1px solid #e4f0fc;
+  transition: .2s;
+}
+
+.compliment:active { transform: scale(.98); }
+
+.compliment h3 {
+  font-size: 14px;
+  color: #4d83b2;
+}
+
+.compliment p {
+  display: none;
+  padding-top: 10px;
+  font-size: 13px;
+}
+
+.compliment.open p { display: block; }
+
+.small {
+  font-size: 11px;
+  color: #8aa8c3;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 24px;
+  color: #89a8c4;
+  font-size: 10px;
+  font-weight: 800;
+}
+</style>
+</head>
+
+<body>
+<div id="floaties"></div>
+
+<div class="container">
+
+<div class="header">
+  <span>♡ A LITTLE SURPRISE ♡</span>
+  <span>MADE FOR PRINCE</span>
+</div>
+
+<div class="progress">
+  <div id="bar"></div>
+</div>
+
+<!-- SECTION 1: WELCOME -->
+<section class="page active" id="p1">
+  <div class="card">
+    <span class="sticker">🧸💙</span>
+    <span class="tag">HEY YOU, YES YOU!</span>
+
+    <h1>To My<br>Sweet Headache</h1>
+
+    <div class="script">Dear Prince ♡</div>
+
+    <div class="divider"></div>
+
+    <p>
+      Helloooo, my cutu lil headache!
+      <br><br>
+      So, someone has been a little grumpy lately.
+      And someone else has decided to do something
+      about it. 😂
+      <br><br>
+      I made a tiny little corner of the internet
+      just for you. Because you deserve some
+      appreciation too.
+    </p>
+
+    <div class="softbox">
+      No boring speeches, no serious lectures.
+      Just a little surprise from your favourite idiot. 🩵
+    </div>
+
+    <button class="btn" onclick="go(2)">
+      OPEN YOUR SURPRISE → 
+    </button>
+  </div>
+</section>
+
+<!-- SECTION 2: APOLOGY -->
+<section class="page" id="p2">
+  <div class="card">
+    <span class="sticker">🥺💌</span>
+    <span class="tag">FIRST THINGS FIRST</span>
+
+    <h2>A little apology...</h2>
+
+    <p class="letter">
+      Okay Prince, listen to me for a minute.
+      <br><br>
+      I'm sorry I leave your reels unseen.
+      It doesn't mean I don't care about what you
+      share with me.🥹sweetuu baby
+      <br><br>
+      I know you send me so many reels, sometimes
+      just because you find them funny or because
+      they remind you of something.
+      <br><br>
+      And I know you want me to watch them,
+      react to them and sometimes compliment you too.
+      😭
+      <br><br>
+      I'm not always good at expressing things,
+      and sometimes I get distracted or forget to
+      check everything.
+      <br><br>
+      But please don't mistake my late replies or
+      unseen reels for a lack of care.
+      <br><br>
+      I really do appreciate the little things you
+      share with me. And I don't want you to feel
+      unimportant.🫠🫂
+    </p>
+
+    <div class="softbox">
+      PS: Please don't stop sending your reels.
+      Your unpaid audience is still here. 😂🫣
+    </div>
+
+    <button class="btn" onclick="go(3)">
+      NOW LET ME COMPLIMENT YOU → 
+    </button>
+  </div>
+</section>
+
+<!-- SECTION 3: COMPLIMENTS -->
+<section class="page" id="p3">
+  <div class="card">
+    <span class="sticker">🥹🩵</span>
+    <span class="tag">THINGS YOU DESERVE TO HEAR</span>
+
+    <h2>Have I told you...</h2>
+
+    <p>
+      I might not compliment you enough,
+      but trust me, I notice these little things.
+      <br><br>
+      Tap each card. I have something to say. 🤍
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="compliment" onclick="reveal(this)">
+      <h3>🧸 Your little bachpana +</h3>
+      <p>
+        You're literally a grown-up little baby.
+        😭 The way you still have that childish,
+        innocent side of you is SO kuchuupuchuu.
+        Please never lose that part of yourself.🎀🔪
+      </p>
+    </div>
+
+    <div class="compliment" onclick="reveal(this)">
+      <h3>🎙️ Those tiny voice notes +</h3>
+      <p>
+        YOUR BABY VOICE NOTES!! And when you sing
+        songs for me in that cute little voice?
+        Seriously, those are some of my favourite
+        little things about you. Never stop being
+        this adorable.
+      </p>
+    </div>
+
+    <div class="compliment" onclick="reveal(this)">
+      <h3>🌀 Your curly hair +</h3>
+      <p>
+        Can we talk about your pretty little curls?
+        They deserve a separate appreciation
+        paragraph. You have no idea how cute
+        they make you look just once look at ur pfp with pink shirt and curly hair..!!
+      </p>
+    </div>
+
+    <div class="compliment" onclick="reveal(this)">
+      <h3>🥹 That cute smile +</h3>
+      <p>
+        Your smile is genuinely so pretty.
+        I hope you have a thousand reasons to
+        smile every single day, because you
+        really do look adorable when you do.
+      </p>
+    </div>
+
+    <div class="compliment" onclick="reveal(this)">
+      <h3>👀 Those dreamy eyes +</h3>
+      <p>
+        And those nasheeli si aankhein!
+        How can someone have such pretty eyes
+        and still call himself a bauna nd not handsome?
+        Make it make sense, sir. 😭
+      </p>
+    </div>
+
+    <div class="compliment" onclick="reveal(this)">
+      <h3>💪 The little biceps +</h3>
+      <p>
+        Excuse me, Mr. Biceps!
+        You've got your cute little muscles,
+        but you're still my motu teddy.
+        Both titles can coexist. 😂
+      </p>
+    </div>
+
+    <div class="compliment" onclick="reveal(this)">
+      <h3>💙 Just YOU +</h3>
+      <p>
+        Your silly jokes, your random songs,
+        your childish behaviour, your little
+        dramatic moments and all those tiny
+        things that make you YOU.
+        I genuinely appreciate them.🎀
+      </p>
+    </div>
+
+    <div class="softbox">
+      One thing I want you to know:
+      <br>
+      You don't need to change anything about
+      your adorable personality to be appreciated.You are super perfect what you are dont change yourself for someone. 🫂
+      I like your little quirks too. 🩵
+    </div>
+
+    <button class="btn" onclick="go(4)">
+      ONE LAST THING, CHADDU → 
+    </button>
+  </div>
+</section>
+
+<!-- SECTION 4: NICKNAME REVEAL -->
+<section class="page" id="p4">
+  <div class="card">
+    <span class="sticker">😭🧸💙</span>
+    <span class="tag">A VERY IMPORTANT ANNOUNCEMENT</span>
+
+    <h2>Introducing...</h2>
+
+    <div class="divider"></div>
+
+    <h1 style="font-size:32px;">
+      LOTIMUR<br>KE CHADDU
+    </h1>
+
+    <div class="script">aka my Prince ♡</div>
+
+    <p>
+      Congratulations! You have officially
+      received your new nickname.
+      <br><br>
+      Why?
+      Because you're a little childish,
+      a little dramatic, a little motu,
+      a little bauna (according to you),
+      and a whole lot of adorable.
+      😂
+      <br><br>
+      You are my cute little headache who sends
+      a million reels, sings random songs in
+      baby voice and somehow manages to be
+      annoying AND adorable at the same time,you really enjoying ur this job of being cute and funny at same time righttt!!!!
+    </p>
+
+    <div class="divider"></div>
+
+    <h2>A tiny promise 💌</h2>
+
+    <p>
+      I might forget to compliment you sometimes,
+      but I don't want you to forget that you're
+      appreciated,and how much you matter to me babuuu 🥹🫵🏻
+      <br><br>
+      I hope you smile a little after reading
+      all this. and dont give me punishment now 🫣
+      <br><br>
+      Now please come back to being my usual
+      annoying, happy little Prince.
+      Deal?
+    </p>
+
+    <div class="softbox">
+      You're stuck with this gurl as your bestfriend.🥹
+      No exchange. No return. No refund. 😭💙
+    </div>
+
+    <div class="script" style="margin-top:25px;">
+      Lots of love & silly friendship,
+    </div>
+    <h2>Your favourite idiot ♡</h2>
+
+    <button class="btn" onclick="finalSurprise()">
+      ONE LAST CLICK 🩵
+    </button>
+
+    <p id="ending" style="margin-top:20px;font-weight:900;"></p>
+  </div>
+</section>
+
+<div class="footer">
+  MADE ESPECIALLY FOR PRINCE · WITH LOVE & CHAOS 🩵
+</div>
+
+</div>
+
+<script>
+let current = 1;
+
+function go(number) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+
+  document.getElementById('p' + number).classList.add('active');
+
+  current = number;
+
+  document.getElementById('bar').style.width =
+    (number / 4 * 100) + '%';
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+function reveal(card) {
+  card.classList.toggle('open');
+}
+
+function finalSurprise() {
+  document.getElementById('ending').innerHTML =
+    "HEHEHE! YOU'RE MY FAVOURITE LOTIMUR KE CHADDU! 🧸💙<br><br>" +
+    "NOW STOP BEING ANGRY AND GO SMILE A LITTLE! 😂";
+
+  for (let i = 0; i < 30; i++) {
+    let heart = document.createElement('div');
+
+    heart.innerHTML = ['💙','🩵','⭐','🧸','♡'][
+      Math.floor(Math.random() * 5)
+    ];
+
+    heart.style.position = 'fixed';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.top = '-30px';
+    heart.style.fontSize = '23px';
+    heart.style.zIndex = '999';
+    heart.style.pointerEvents = 'none';
+    heart.style.transition = 'transform 3s linear, opacity 3s';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.style.transform = 'translateY(110vh) rotate(400deg)';
+      heart.style.opacity = '0';
+    }, 50);
+
+    setTimeout(() => heart.remove(), 3200);
+  }
+}
+
+// Floating decorations
+const floaties = document.getElementById('floaties');
+const symbols = ['💙','♡','✦','☁️','🩵','⭐'];
+
+for (let i = 0; i < 25; i++) {
+  const item = document.createElement('span');
+
+  item.className = 'float';
+  item.innerHTML = symbols[
+    Math.floor(Math.random() * symbols.length)
+  ];
+
+  item.style.left = Math.random() * 100 + '%';
+  item.style.top = Math.random() * 100 + '%';
+  item.style.fontSize = (13 + Math.random() * 13) + 'px';
+  item.style.animationDelay = Math.random() * 5 + 's';
+
+  floaties.appendChild(item);
+}
+</script>
+
+</body>
+</html>
